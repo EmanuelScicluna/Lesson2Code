@@ -16,7 +16,11 @@ function averageVar (...$parameterList) {
         foreach ($parameterList as $parameter) {
                 $sum += $parameter;
         }
-    $average = ($sum / $parameter);
+//        Your Solution
+//        $average = ($sum / $parameter);
+//        Average = sum / number of elements.. here $parameter is the last number of the array
+        $average = $sum / count($parameterList);
+//       ^^ correct solution
     echo "$average";
     }
    echo "<br>"; 
@@ -27,6 +31,8 @@ function getForce ($m) {
     global $g;
     $f = $m * $g;
     echo "$f";
+    //use a return here, to provide the value back
+    return $f;
 }
 getForce (200);
 
